@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Personal Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- ===================== INTERNAL CSS ===================== -->
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    color: #333;
+  }
+
+  /* Header */
+  header {
+    background: #333;
+    padding: 15px 0;
+    text-align: center;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    list-style: none;
+  }
+
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .navbar a:hover {
+    color: orange;
+  }
+
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #333;
+    margin-bottom: 15px;
+  }
+
+  .typing-text {
+    font-size: 1.3rem;
+    color: blue;
+    font-style: italic;
+    border-right: 3px solid #333;
+    width: fit-content;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink 0.7s infinite;
+  }
+
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+
+  /* Sections */
+  .section {
+    background: #fff;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 40px 20px;
+    border-radius: 8px;
+  }
+
+  /* Projects */
+  .project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+
+  .project-item {
+    background: #eaeaea;
+    padding: 20px;
+    border-radius: 6px;
+  }
+
+  /* Skills */
+  .skill-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .skill-list li {
+    background: #333;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+  }
+  .skill-card {
+    background: #333;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.3s, background 0.3s;
+  }
+
+  .skill-card:hover {
+    background: orange;
+    transform: translateY(-5px);
+    cursor: pointer;
+  }
+
+  /* Contact */
+  .social-links {
+    list-style: none;
+    margin-top: 10px;
+    color: blue;
+    transition: color 0.3s, transform 0.3s;
+  }
+
+  .social-links li {
+    margin: 8px 0;
+  }
+
+  .social-links a {
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .social-links a:hover {
+    text-decoration: underline;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 15px;
+    background: #333;
+    color: white;
+    margin-top: 20px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .navbar ul {
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+  }
+  /* ===================== CONTACT ICON COLORS & HOVER ===================== */
+.social-links a.email i { color: #D44638; }      /* Red-ish for email */
+.social-links a.phone i { color: #25D366; }      /* Green-ish for phone */
+.social-links a.telegram i { color: #0088cc; }   /* Telegram blue */
+.social-links a.facebook i { color: #1877f2; }   /* Facebook blue */
+
+.social-links a:hover i {
+  transform: scale(1.2);   /* Slightly enlarge on hover */
+  opacity: 0.8;            /* Slightly transparent on hover */
+  transition: transform 0.3s, opacity 0.3s; /* Smooth animation */
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+<!-- ===================== HERO ===================== -->
+<section id="home" class="hero">
+  <img src="myphoto.jpg" class="profile-img" ale="image is notfound">
+
+  <h1>CHOGARA CHOKO</h1>
+  <p class="typing-text"></p> <!-- Typing animation -->
+</section>
+
+
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="section">
+  <h2>About Me</h2>
+  <p>Hello, my name is <b>Chogara Choko</b>.</p>
+  <p>I am a Computer Science student at Wachemo University, interested in Front-End Web Development using HTML, CSS and JavaScript.</p>
+</section>
+
+
+
+<!-- ===================== PROJECTS ===================== -->
+<section id="projects" class="section">
+  <h2>Projects</h2>
+
+  <div class="project-list">
+    <div class="project-item">
+      <h3>Project One</h3>
+      <p>Advanced Java - Cafeteria Management System project. Faced some challenges with database integration.</p>
+    </div>
+
+    <div class="project-item">
+      <h3>Project Two</h3>
+      <p>Personal Portfolio Website using HTML, CSS and JavaScript.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ===================== SKILLS ===================== -->
+<section id="skills" class="section">
+  <h2>Skills</h2>
+  <ul class="skill-list">
+  <li class="skill-card">HTML</li>
+  <li class="skill-card">CSS</li>
+  <li class="skill-card">JavaScript</li>
+  <li class="skill-card">Advanced Java</li>
+  <li class="skill-card">OOPS</li>
+  <li class="skill-card">MySQL</li>
+  <li class="skill-card">Networking</li>
+  <li class="skill-card">Problem Solving</li>
+  </ul>
+</section>
+
+
+
+<!-- ===================== CONTACT ===================== -->
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="section">
+  <h2>Contact Me</h2>
+
+ <ul class="social-links">
+  <li>
+    <a href="mailto:chogarachoko4@gmail.com" class="email">
+      <i class="fa-solid fa-envelope"></i> Email: chogarachoko4@gmail.com
+    </a>
+  </li>
+
+  <li>
+    <a href="tel:+251934960579" class="phone">
+      <i class="fa-solid fa-phone"></i> Phone: +251 934 960 579
+    </a>
+  </li>
+
+  <li>
+    <a href="https://t.me/choge_Geta_Lij" target="_blank" class="telegram">
+      <i class="fa-brands fa-telegram"></i> Telegram
+    </a>
+  </li>
+
+  <li>
+    <a href="https://facebook.com" target="_blank" class="facebook">
+      <i class="fa-brands fa-facebook"></i> Facebook
+    </a>
+  </li>
+</ul>
+
+</section>
+
+
+
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <p style="color: orange;">&copy; 2025 Chogara Choko. All rights reserved.</p>
+</footer>
+
+
+
+<!-- ===================== INTERNAL JAVASCRIPT ===================== -->
+<script>
+  // Typing animation
+  const text = "Front-End Web Developer";
+  const typingElement = document.querySelector(".typing-text");
+  let index = 0;
+
+  function typeEffect() {
+    if (index < text.length) {
+      typingElement.textContent += text.charAt(index);
+      index++;
+      setTimeout(typeEffect, 100);
+    }
+  }
+
+  window.onload = typeEffect;
+
+
+  // Smooth scroll for navigation links
+  document.querySelectorAll('.navbar a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const section = document.querySelector(this.getAttribute('href'));
+      section.scrollIntoView({behavior: "smooth"});
+    });
+  });
+</script>
+
+</body>
+</html>
